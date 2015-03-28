@@ -7,6 +7,7 @@
         android:text=".渐变动画（Tweened Animation）"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         />
 
     <Button
@@ -35,10 +36,27 @@
         android:id="@+id/scalejava"
         />
 
+    <include layout="@layout/line"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="旋转rotate（xml）"
+        android:id="@+id/rotatexml"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="旋转rotate（java）"
+        android:id="@+id/rotatejava"
+        />
+
+
     <TextView
         android:text=".帧动画（Frame Animation）"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         />
+
 
 </LinearLayout>

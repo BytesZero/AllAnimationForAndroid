@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -51,6 +52,9 @@ public class AnimationActivity extends ActionBarActivity {
             } else if (animation.equals("scale")) {
                 contextString = "通过xml代码方式展示的缩放(scale)变化";
                 animation1 = AnimationUtils.loadAnimation(this, R.anim.scalexml);
+            } else if (animation.equals("rotate")) {
+                contextString = "通过xml代码方式展示的旋转(rotate)变化";
+                animation1 = AnimationUtils.loadAnimation(this, R.anim.rotatexml);
             }
 
         } else {//通过java代码添加的动画
@@ -70,19 +74,34 @@ public class AnimationActivity extends ActionBarActivity {
                 contextString = "通过java代码方式展示的缩放(scale)变化";
                 /**
                  * ( float fromX, float toX, float fromY, float toY, float pivotX, float pivotY)
+                 *
                  * float fromX 动画起始时 X坐标上的伸缩尺寸
                  * float toX 动画结束时 X坐标上的伸缩尺寸
                  * float fromY 动画起始时Y坐标上的伸缩尺寸
                  * float toY 动画结束时Y坐标上的伸缩尺寸
                  * float pivotXValue 动画相对于物件的X坐标的开始位置
                  * float pivotYValue 动画相对于物件的Y坐标的开始位置
-                 * */
-                animation1 = new ScaleAnimation(1f, 0f, 1f, 1f, 0.5f, 0.5f);
+                 */
+                animation1 = new ScaleAnimation(1f, 0f, 1f, 1f, 0.5f,0.5f);
                 //动画时长1000毫秒
                 animation1.setDuration(1000);
                 //动画结束时停留在动画结束的时刻
                 animation1.setFillAfter(true);
                 //重复3次动画
+                animation1.setRepeatCount(3);
+            } else if (animation.equals("rotate")) {
+                contextString = "通过java代码方式展示的旋转(rotate)变化";
+                /**
+                 * (float fromDegrees, float toDegrees, float pivotX, float pivotY)
+                 *
+                 * float fromDegrees动画开始的度数
+                 * float toDegrees 动画结束的度数
+                 * float pivotX 动画围绕的旋转的中心x
+                 * float pivotY 动画围绕的旋转的中心y
+                 */
+                animation1 = new RotateAnimation(0f,360f,0f,0f);
+                animation1.setDuration(1000);
+                animation1.setFillAfter(false);
                 animation1.setRepeatCount(3);
             }
         }
