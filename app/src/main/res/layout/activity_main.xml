@@ -12,14 +12,27 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="透明度（xml）"
+        android:text="透明度alpha（xml）"
         android:id="@+id/alphaxml"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="透明度（java）"
+        android:text="透明度alpha（java）"
         android:id="@+id/alphajava"
+        />
+    <include layout="@layout/line"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="缩放scale（xml）"
+        android:id="@+id/scalexml"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="缩放scale（java）"
+        android:id="@+id/scalejava"
         />
 
     <TextView

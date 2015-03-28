@@ -12,7 +12,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     /**
      * 渐变动画
      */
-    Button alphaxml,alphajava;
+    Button alphaxml,alphajava,scalexml,scalejava;
 
 
     @Override
@@ -24,10 +24,17 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     }
     //初始化控件
     void initView(){
+        //透明度
         alphaxml= (Button) findViewById(R.id.alphaxml);
         alphaxml.setOnClickListener(this);
         alphajava= (Button) findViewById(R.id.alphajava);
         alphajava.setOnClickListener(this);
+        //缩放
+        scalexml= (Button) findViewById(R.id.scalexml);
+        scalexml.setOnClickListener(this);
+        scalejava= (Button) findViewById(R.id.scalejava);
+        scalejava.setOnClickListener(this);
+
     }
 
     //点击事件
@@ -44,6 +51,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.alphajava:{
                 intent.putExtra("type","java");
                 intent.putExtra("animation","alpha");
+                break;
+            }
+
+            case R.id.scalexml :{
+                intent.putExtra("type","xml");
+                intent.putExtra("animation","scale");
+                break;
+            }
+
+            case R.id.scalejava :{
+                intent.putExtra("type","java");
+                intent.putExtra("animation","scale");
                 break;
             }
         }
