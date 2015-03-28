@@ -50,6 +50,20 @@
         android:id="@+id/rotatejava"
         />
 
+    <include layout="@layout/line"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="移动translate（xml）"
+        android:id="@+id/translatexml"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="移动translate（java）"
+        android:id="@+id/translatejava"
+        />
+
 
     <TextView
         android:text=".帧动画（Frame Animation）"

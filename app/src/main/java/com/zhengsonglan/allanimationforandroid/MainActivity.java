@@ -12,7 +12,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     /**
      * 渐变动画
      */
-    Button alphaxml,alphajava,scalexml,scalejava,rotatexml,rotatejava;
+    Button alphaxml,alphajava,scalexml,scalejava,rotatexml,rotatejava,translatexml,translatejava;
 
 
     @Override
@@ -39,6 +39,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         rotatexml.setOnClickListener(this);
         rotatejava= (Button) findViewById(R.id.rotatejava);
         rotatejava.setOnClickListener(this);
+        //移动
+        translatexml= (Button) findViewById(R.id.translatexml);
+        translatexml.setOnClickListener(this);
+        translatejava= (Button) findViewById(R.id.translatejava);
+        translatejava.setOnClickListener(this);
 
 
     }
@@ -81,6 +86,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.rotatejava :{
                 intent.putExtra("type","java");
                 intent.putExtra("animation","rotate");
+                break;
+            }
+
+            case R.id.translatexml :{
+                intent.putExtra("type","xml");
+                intent.putExtra("animation","translate");
+                break;
+            }
+
+            case R.id.translatejava :{
+                intent.putExtra("type","java");
+                intent.putExtra("animation","translate");
                 break;
             }
         }
