@@ -45,7 +45,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         translatejava= (Button) findViewById(R.id.translatejava);
         translatejava.setOnClickListener(this);
 
-
     }
 
     //点击事件

@@ -109,6 +109,14 @@ public class AnimationActivity extends ActionBarActivity {
                 animation1.setRepeatCount(3);
             } else if(animation.equals("translate")){
                 contextString="通过java代码方式展示的移动(translate)变化";
+                /**
+                 * TranslateAnimation(float fromXDelta, float toXDelta, float fromYDelta, float toYDelta)
+                 *
+                 * float fromXDelta 动画开始X轴上的位置
+                 * float toXDelta 动画结束在X轴上的位置
+                 * float fromYDelta 动画开始Y轴上的位置
+                 * float toYDelta 动画结束在Y轴上的位置
+                 */
                 animation1=new TranslateAnimation(-500f,500f,-200,200);
                 animation1.setDuration(1500);
                 animation1.setFillAfter(false);
